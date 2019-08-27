@@ -1,0 +1,19 @@
+<h2>{{tableName}}</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Código Padre</th>
+            <th scope="col">Descripción Padre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of ubigeos">
+            <td>{{item.codigo}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.codigoPadre}}</td>
+            <td>{{item.nombrePadre}}</td>
+        </tr>
+    </tbody>
+</table>

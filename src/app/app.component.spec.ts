@@ -1,16 +1,21 @@
 import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppComponent } from './app.component';
+
+import { E2e3exService } from './e2e3ex/e2e3ex.service';
+import { E2e3ExModule } from './e2e3ex/e2e3ex.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+       
+        E2e3ExModule
       ],
       declarations: [
         AppComponent
       ],
+      providers:[E2e3exService]
     }).compileComponents();
   }));
 
@@ -26,10 +31,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('e2e3');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('e2e3 app is running!');
-  });
+
 });
